@@ -18,6 +18,7 @@ type OptionDecorator = CallExpressionDecorator & {
   };
 };
 
+const SCHEMA_IDENTIFIER = 'schema';
 const EXECUTE_IDENTIFIER = `execute`;
 const PATH_IDENTIFIER = `Path`;
 const PATHS_IDENTIFIER = `paths`;
@@ -190,7 +191,7 @@ const classPropertyTransformer = (
 };
 
 export const commandClassBodyTransformer = (spec: TransformerSpec): void => {
-  const { j, root } = spec;
+  const { j, root, report } = spec;
 
   const classBodies = root.find(j.ClassBody).filter(({ parent: { value: parentNode } }) => {
     return (
@@ -206,13 +207,26 @@ export const commandClassBodyTransformer = (spec: TransformerSpec): void => {
     ...node,
     body: node.body.flatMap((statement) => {
       if (
+        j.ClassProperty.check(statement) &&
+        statement.static &&
+        j.Identifier.check(statement.key) &&
+        statement.key.name === SCHEMA_IDENTIFIER
+      ) {
+        report('Found static schema property; needs to be manually migrated');
+      }
+
+      if (
         `key` in statement &&
+        !(statement as jscodeshift.MethodDefinition).static &&
         j.Identifier.check(statement.key) &&
         statement.key.name === EXECUTE_IDENTIFIER
-      )
+      ) {
         return commandPathTransformer(statement, spec);
+      }
 
-      if (j.ClassProperty.check(statement)) return classPropertyTransformer(statement, spec);
+      if (j.ClassProperty.check(statement) && !statement.static) {
+        return classPropertyTransformer(statement, spec);
+      }
 
       return statement;
     }),

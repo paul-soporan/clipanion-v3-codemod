@@ -12,7 +12,7 @@
 
 ---
 
-`clipanion-v3-codemod` is a [Clipanion](https://github.com/arcanis/clipanion) v2 to v3 codemod written with [`jscodeshift`](https://github.com/facebook/jscodeshift). It can migrate most Clipanion v2 code, with a few exceptions:
+`clipanion-v3-codemod` is a [Clipanion](https://github.com/arcanis/clipanion) v2 to v3 codemod written with [`jscodeshift`](https://github.com/facebook/jscodeshift). It can migrate most Clipanion v2 code, with a few exceptions (warnings will be emitted):
 
 - `static schema` (and `Command.Schema`) - has to be manually migrated to [Typanion](https://github.com/arcanis/typanion/)
 - multiple option decorators on the same class property - this isn't supported by Clipanion v3
