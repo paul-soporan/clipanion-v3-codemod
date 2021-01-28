@@ -15,4 +15,4 @@ const transformer: jscodeshift.Transform = (file, api) => {
 
 export default transformer;
 
-export const parser = `ts`;
+export const parser = `tsx`;

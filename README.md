@@ -41,8 +41,8 @@ TypeScript type definitions are included out-of-the-box.
 
 Using with Yarn:
 
-`yarn jscodeshift -t $(yarn node -p "require.resolve('clipanion-v3-codemod')") .`
+`yarn jscodeshift -t $(yarn node -p "require.resolve('clipanion-v3-codemod')") <path>`
 
 Using with npx:
 
-`npx jscodeshift -t $(node -p "require.resolve('clipanion-v3-codemod')") .`
+`npx jscodeshift -t $(node -p "require.resolve('clipanion-v3-codemod')") <path>`
