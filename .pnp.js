@@ -3023,7 +3023,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@types/jscodeshift", [
         ["npm:0.7.2", {
-          "packageLocation": "./.yarn/cache/@types-jscodeshift-npm-0.7.2-0366b283e9-d8f0994ca8.zip/node_modules/@types/jscodeshift/",
+          "packageLocation": "./.yarn/cache/@types-jscodeshift-npm-0.7.2-0366b283e9-9a67240dff.zip/node_modules/@types/jscodeshift/",
           "packageDependencies": [
             ["@types/jscodeshift", "npm:0.7.2"],
             ["ast-types", "npm:0.12.1"],
@@ -4039,7 +4039,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["ast-types", [
         ["npm:0.12.1", {
-          "packageLocation": "./.yarn/cache/ast-types-npm-0.12.1-16ebec22ec-7a1b5e5047.zip/node_modules/ast-types/",
+          "packageLocation": "./.yarn/cache/ast-types-npm-0.12.1-16ebec22ec-3e729e5a82.zip/node_modules/ast-types/",
           "packageDependencies": [
             ["ast-types", "npm:0.12.1"]
           ],

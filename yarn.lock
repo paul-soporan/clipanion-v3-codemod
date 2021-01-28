@@ -1850,7 +1850,7 @@ __metadata:
   dependencies:
     ast-types: 0.12.1
     recast: 0.17.2
-  checksum: d8f0994ca8954dfde221775ccf5ba15d6ea10dc84c57c6e2fd9d6aebdd3a4c2d71aaaab61b17248db521c12a188f79192a081e8437906a074680f6fb47a55f1e
+  checksum: 9a67240dffc66bf7f6271550496ed248d839b585ef00d95eb33a9438b81a059a3d9b6c93fe7a6222852e9662c64eb905fd5b9b774f19ab0193dfec270d173c73
   languageName: node
   linkType: hard
 
@@ -2613,7 +2613,7 @@ __metadata:
 "ast-types@npm:0.12.1":
   version: 0.12.1
   resolution: "ast-types@npm:0.12.1"
-  checksum: 7a1b5e5047fd7ee250d1245d07fdeda46b574285e0761e274ea0014ac689b2aee05431752d6fda7e3da6a6a303b058d1a5f30444a4478fa77401874552fa3a02
+  checksum: 3e729e5a82d57a321c5d5b3cfa582516d8f1f93777cc2cd5af1c1844c92e8324ac72ca0e7d3c3c9c6e4d38361c1e48b66421326453f561a25f87a10695498c2a
   languageName: node
   linkType: hard
 
