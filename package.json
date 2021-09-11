@@ -30,6 +30,9 @@
   "dependencies": {
     "jscodeshift-add-imports": "^1.0.7"
   },
+  "peerDependencies": {
+    "jscodeshift": "^0.11.0"
+  },
   "devDependencies": {
     "@jest/types": "^26.3.0",
     "@rollup/plugin-commonjs": "^15.0.0",
